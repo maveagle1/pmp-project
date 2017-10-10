@@ -1,21 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProjectList from './components/Project-list';
 
-class App extends Component {
+
+  import { bindActionCreators } from 'redux';
+  import { connect } from 'react-redux';
+  import { getAllProjects } from './actions/projects';
+
+
+
+export class App extends Component {
+
+
+  componentDidMount() {
+  this.props.getAllProjects();
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Header />
+        <ProjectList />
+        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+
+  function mapDispatchToProps(dispatch) {
+      return {
+        getAllProjects: bindActionCreators(getAllProjects, dispatch)
+      }
+  }
+
+export default connect(null, mapDispatchToProps) (App);
