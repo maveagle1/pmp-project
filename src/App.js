@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import DetailPage from './components/DetailPage';
 import Projectlist from './components/Project-list';
@@ -24,21 +24,21 @@ export class App extends Component {
       <div>
         <Router>
           <div>
-            <nav>
+            <nav className="space">
               <div className="nav-wrapper #4a148c purple darken-4">
                 <a href="/" className="brand-logo center #4a148c purple darken-4">Program Dashboard</a>
                 <ul id="nav-mobile" className="right #4a148c purple darken-4 hide-on-med-and-down">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/AddProject">Add Program</a></li>
-                  <li><a href="/DetailPage">Detail Editor</a></li>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/add">Add Program</Link></li>
+                  <li><Link to="/detail">Detail Editor</Link></li>
                 </ul>
               </div>
             </nav>
             <Route exact path="/" component={Projectlist}/>
-            <Route exact path="/AddProject" component={AddProject}/>
-            <Route exact path="/DetailPage" component={DetailPage}/>
-            <Route exact path="/Update" component={UpdateProject}/>
-            <Route exact path="/Delete" component={DeleteProject}/>
+            <Route exact path="/add" component={AddProject}/>
+            <Route exact path="/detail" component={DetailPage}/>
+            <Route exact path="/update" component={UpdateProject}/>
+            <Route exact path="/delete" component={DeleteProject}/>
             <Footer/>
           </div>
         </Router>

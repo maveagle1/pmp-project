@@ -18,6 +18,7 @@ class DetailPage extends Component {
               <th className="grey-text text-lighten-4">Priority</th>
               <th className="grey-text text-lighten-4">Status</th>
               <th className="grey-text text-lighten-4">Complete</th>
+              <th className="grey-text text-lighten-4">Edit</th>
           </tr>
         </thead>
         <tbody>
