@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Action that gets all of the cameras
+
 export const getAllProjects = () => {
   return {
     type: 'GET_ALL_PROJECTS',
@@ -8,9 +8,22 @@ export const getAllProjects = () => {
   }
 }
 
-export const addToCart = (id) => {
+export const addToProject = () => {
   return {
-    type: 'ADD_TO_PROJECTS',
-    payload: axios.patch(`http://localhost:8000/cart/${id}/add`)
+    type: 'ADD_TO_PROJECTs',
+    payload: axios.patch(`http://localhost:8000/projects/add`)
+  }
+}
+export const deleteProject = (id) => {
+  return {
+    type: 'DELETE_PROJECT',
+    payload: axios.patch(`http://localhost:8000/Project-list/${id}/delete`)
+  }
+}
+
+export const updateProject = (id) => {
+  return {
+    type: 'UPDATE_PROJECT',
+    payload: axios.patch(`http://localhost:8000/projects/${id}/update`)
   }
 }

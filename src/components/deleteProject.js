@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-
-class DetailPage extends Component {
+class DeleteProject extends Component {
 
   render () {
     return (
+      <div className="project">
+
       <div className="project">
         <row className="row left bold">
           <h5 className="grey-text text-lighten-4">Program Editor</h5>
@@ -29,42 +30,17 @@ class DetailPage extends Component {
             <td>WIP</td>
             <td>25%</td>
           </tr>
-          <tr>
-            <td>Window 8.0 Upgrade</td>
-            <td>12</td>
-            <td>Alan</td>
-            <td>High</td>
-            <td>Not Started</td>
-            <td>0%</td>
-          </tr>
-          <tr>
-            <td>ICD-10</td>
-            <td>8</td>
-            <td>Jonathan</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-          </tr>
-          <tr>
-            <td>Cloud Uplift</td>
-            <td>10</td>
-            <td>Jose</td>
-            <td>High</td>
-            <td>WIP</td>
-            <td>50%</td>
-          </tr>
-          <tr>
-            <td>Help Desk Uplift</td>
-            <td>5</td>
-            <td>Michael</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-          </tr>
         </tbody>
+        <div className="container">
+          <br></br>
+          <button class="btn waves-effect waves-light #4a148c purple darken-4"
+            type="submit" name="action">Delete</button>
+        </div>
       </table>
-    </div>
+      </div>
+
+      </div>
     )
   }
 }
-export default DetailPage;
+export default DeleteProject;

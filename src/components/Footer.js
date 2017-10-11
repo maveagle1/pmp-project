@@ -4,10 +4,9 @@ class Footer extends Component {
   render () {
     return (
       <div>
-        <br></br>
-        <footer class="page-footer">
+        <footer className="page-footer #4a148c purple darken-4">
               <row className="row center">
-                <p class="grey-text text-lighten-4"><h6>Q3 Project - Michael Valadez</h6></p>
+                <p className="grey-text text-lighten-4 #4a148c purple darken-4"><h6>Q3 Project - Michael Valadez</h6></p>
               </row>
         </footer>
       </div>
