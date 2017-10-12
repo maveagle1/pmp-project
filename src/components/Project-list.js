@@ -6,17 +6,17 @@ class Projectlist extends Component {
     return (
       <div className="project">
         <row className="row left bold">
-          <h5 className="grey-text text-lighten-4">Program Details</h5>
+          <h5 className="black-text text-lighten-4 bold">Program Details</h5>
         </row>
         <table className="highlight responsive-table centered">
         <thead>
           <tr>
-              <th className="grey-text text-lighten-4">Program Name</th>
-              <th className="grey-text text-lighten-4">Number of Projects</th>
-              <th className="grey-text text-lighten-4">Program Manager</th>
-              <th className="grey-text text-lighten-4">Priority</th>
-              <th className="grey-text text-lighten-4">Status</th>
-              <th className="grey-text text-lighten-4">Complete</th>
+              <th className="black-text text-lighten-4">Program Name</th>
+              <th className="black-text text-lighten-4">Number of Projects</th>
+              <th className="black-text text-lighten-4">Program Manager</th>
+              <th className="black-text text-lighten-4">Priority</th>
+              <th className="black-text text-lighten-4">Status</th>
+              <th className="black-text text-lighten-4">Complete</th>
           </tr>
         </thead>
 

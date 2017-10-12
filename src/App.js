@@ -22,29 +22,29 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Router>
-          <div>
-            <nav className="space">
-              <div className="nav-wrapper #4a148c purple darken-4">
-                <a href="/" className="brand-logo center #4a148c purple darken-4">Program Dashboard</a>
-                <ul id="nav-mobile" className="right #4a148c purple darken-4 hide-on-med-and-down">
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/add">Add Program</Link></li>
-                  <li><Link to="/detail">Detail Editor</Link></li>
-                </ul>
-              </div>
-            </nav>
-            <Route exact path="/" component={Projectlist}/>
-            <Route exact path="/add" component={AddProject}/>
-            <Route exact path="/detail" component={DetailPage}/>
-            <Route exact path="/update" component={UpdateProject}/>
-            <Route exact path="/delete" component={DeleteProject}/>
-            <Footer/>
-          </div>
-        </Router>
-      </div>
-    );
-  }
+       <Router>
+         <div>
+           <nav>
+             <div className="nav-wrapper black">
+               <a href="/" className="brand-logo center black">Program Dashboard</a>
+               <ul id="nav-mobile" className="right black hide-on-med-and-down">
+                 <li><Link to="/">Home</Link></li>
+                 <li><Link to="/add">Add Program</Link></li>
+                 <li><Link to="/detail">Detail Editor</Link></li>
+               </ul>
+             </div>
+           </nav>
+           <Route exact path="/" component={Projectlist}/>
+           <Route exact path="/add" component={AddProject}/>
+           <Route exact path="/detail" component={DetailPage}/>
+           <Route exact path="/update" component={UpdateProject}/>
+           <Route exact path="/delete" component={DeleteProject}/>
+           <Footer/>
+         </div>
+       </Router>
+     </div>
+   );
+ }
 }
 
 function mapDispatchToProps(dispatch) {

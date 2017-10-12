@@ -7,7 +7,7 @@ html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
   }
 .project {
-  background: url("./components/background.jpg");
+  background: url("./components/background.jpeg");
   background-size: cover;
-  height: 79vh;
+  height: 83vh;
 }

@@ -8,17 +8,17 @@ class DeleteProject extends Component {
 
       <div className="project">
         <row className="row left bold">
-          <h5 className="grey-text text-lighten-4">Program Editor</h5>
+          <h5 className="black-text text-lighten-4">Delete Item</h5>
         </row>
         <table className="highlight">
         <thead>
           <tr>
-              <th className="grey-text text-lighten-4">Program Name</th>
-              <th className="grey-text text-lighten-4">Number of Projects</th>
-              <th className="grey-text text-lighten-4">Program Manager</th>
-              <th className="grey-text text-lighten-4">Priority</th>
-              <th className="grey-text text-lighten-4">Status</th>
-              <th className="grey-text text-lighten-4">Complete</th>
+              <th className="black-text text-lighten-4">Program Name</th>
+              <th className="black-text text-lighten-4">Number of Projects</th>
+              <th className="black-text text-lighten-4">Program Manager</th>
+              <th className="black-text text-lighten-4">Priority</th>
+              <th className="black-text text-lighten-4">Status</th>
+              <th className="black-text text-lighten-4">Complete</th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +33,7 @@ class DeleteProject extends Component {
         </tbody>
         <div className="container">
           <br></br>
-          <button class="btn waves-effect waves-light #4a148c purple darken-4"
+          <button class="btn waves-effect waves-light black"
             type="submit" name="action">Delete</button>
         </div>
       </table>
