@@ -13,6 +13,7 @@ class DetailPage extends Component {
         <table className="highlight">
         <thead>
           <tr>
+              <th className="black-text text-lighten-4">ID</th>
               <th className="black-text text-lighten-4">Program Name</th>
               <th className="black-text text-lighten-4">Number of Projects</th>
               <th className="black-text text-lighten-4">Program Manager</th>
@@ -24,6 +25,7 @@ class DetailPage extends Component {
         </thead>
         <tbody>
           <tr>
+            <td>1</td>
             <td>AppExtender</td>
             <td>10</td>
             <td>Alvin</td>
@@ -33,6 +35,7 @@ class DetailPage extends Component {
             <td> <Button /> </td>
           </tr>
           <tr>
+            <td>2</td>
             <td>Window 8.0 Upgrade</td>
             <td>12</td>
             <td>Alan</td>
@@ -42,6 +45,7 @@ class DetailPage extends Component {
             <td> <Button /> </td>
           </tr>
           <tr>
+            <td>3</td>
             <td>ICD-10</td>
             <td>8</td>
             <td>Jonathan</td>
@@ -51,6 +55,7 @@ class DetailPage extends Component {
             <td> <Button /> </td>
           </tr>
           <tr>
+            <td>4</td>
             <td>Cloud Uplift</td>
             <td>10</td>
             <td>Jose</td>
@@ -60,6 +65,7 @@ class DetailPage extends Component {
             <td> <Button /> </td>
           </tr>
           <tr>
+            <td>5</td>
             <td>Help Desk Uplift</td>
             <td>5</td>
             <td>Michael</td>
