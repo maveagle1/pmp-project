@@ -29,8 +29,10 @@ export class App extends Component {
                <a href="/" className="brand-logo center black">Program Dashboard</a>
                <ul id="nav-mobile" className="right black hide-on-med-and-down">
                  <li><Link to="/">Home</Link></li>
-                 <li><Link to="/add">Add Program</Link></li>
+                 <li><Link to="/add">Add</Link></li>
                  <li><Link to="/detail">Detail Editor</Link></li>
+                 <li><Link to="/delete">Delete</Link></li>
+                 <li><Link to="/update">Update</Link></li>
                </ul>
              </div>
            </nav>

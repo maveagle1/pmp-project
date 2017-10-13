@@ -1,19 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import Button from './button';
-
 
 class DetailPage extends Component {
 
   render () {
+
+    const createListItems = () => {
+      return this.props.projects.map((project) => {
+        return (
+              <tr>
+                <td>{project.id}</td>
+                <td>{project.program_name}</td>
+                <td>{project.number_of_projects}</td>
+                <td>{project.program_manager}</td>
+                <td>{project.priority}</td>
+                <td>{project.status}</td>
+                <td>{project.complete}</td>
+                <td> <Button /> </td>
+              </tr>
+        )
+      })
+    }
+
     return (
       <div className="project">
-        <row className="row left bold">
+        <div className="row left bold">
           <h5 className="black-text">Program Editor</h5>
-        </row>
-        <table className="highlight">
+        </div>
+        <table className="highlight responsive-table centered">
         <thead>
           <tr>
-              <th className="black-text text-lighten-4">ID</th>
+              <th className="black-text text-lighten-4">id</th>
               <th className="black-text text-lighten-4">Program Name</th>
               <th className="black-text text-lighten-4">Number of Projects</th>
               <th className="black-text text-lighten-4">Program Manager</th>
@@ -24,60 +42,18 @@ class DetailPage extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>AppExtender</td>
-            <td>10</td>
-            <td>Alvin</td>
-            <td>Medium</td>
-            <td>WIP</td>
-            <td>25%</td>
-            <td> <Button /> </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Window 8.0 Upgrade</td>
-            <td>12</td>
-            <td>Alan</td>
-            <td>High</td>
-            <td>Not Started</td>
-            <td>0%</td>
-            <td> <Button /> </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>ICD-10</td>
-            <td>8</td>
-            <td>Jonathan</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-            <td> <Button /> </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Cloud Uplift</td>
-            <td>10</td>
-            <td>Jose</td>
-            <td>High</td>
-            <td>WIP</td>
-            <td>50%</td>
-            <td> <Button /> </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Help Desk Uplift</td>
-            <td>5</td>
-            <td>Michael</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-            <td> <Button /> </td>
-          </tr>
+          {createListItems()}
         </tbody>
       </table>
     </div>
     )
   }
 }
-export default DetailPage;
+
+function mapStateToProps(state) {
+  return {
+    projects: state.projects
+  };
+}
+
+export default connect(mapStateToProps, null)(DetailPage);

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class DeleteProject extends Component {
 
   render () {
+
+
+
     return (
       <div className="project">
-
-      <div className="project">
-        <row className="row left bold">
+        <div className="row left bold">
           <h5 className="black-text text-lighten-4">Delete Item</h5>
-        </row>
+        </div>
         <table className="highlight">
         <thead>
           <tr>
@@ -23,24 +26,27 @@ class DeleteProject extends Component {
         </thead>
         <tbody>
           <tr>
-            <td>AppExtender</td>
-            <td>10</td>
-            <td>Alvin</td>
-            <td>Medium</td>
-            <td>WIP</td>
-            <td>25%</td>
-          </tr>
+           <td>ICD-10</td>
+           <td>12</td>
+           <td>Joe</td>
+           <td>High</td>
+           <td>23</td>
+         </tr>
         </tbody>
         <div className="container">
           <br></br>
-          <button class="btn waves-effect waves-light black"
-            type="submit" name="action">Delete</button>
+          <Link to="/" className="waves-effect waves-light btn-large black">Delete</Link>
         </div>
       </table>
-      </div>
 
       </div>
     )
   }
 }
-export default DeleteProject;
+function mapStateToProps(state) {
+  return {
+    projects: state.projects
+  };
+}
+
+export default connect(mapStateToProps, null)(DeleteProject);

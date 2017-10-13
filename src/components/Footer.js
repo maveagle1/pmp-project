@@ -5,9 +5,9 @@ class Footer extends Component {
     return (
       <div>
         <footer className="page-footer black">
-              <row className="row center">
+              <div className="row center">
                 <p className="grey-text text-lighten-4 black"><h6>Q3 Project - Michael Valadez</h6></p>
-              </row>
+              </div>
         </footer>
       </div>
     )

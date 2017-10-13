@@ -8,15 +8,15 @@ export const getAllProjects = () => {
   }
 }
 
-export const addToProject = () => {
+export const addToProject = (projects) => {
   return {
-    type: 'ADD_TO_PROJECTs',
-    payload: axios.post(`http://localhost:9001/projects/add`)
+    type: 'ADD_TO_PROJECTS',
+    payload: axios.post(`http://localhost:9001/projects/add`, projects)
   }
 }
-export const deleteProject = (id) => {
+export const deleteRow = (id) => {
   return {
-    type: 'DELETE_PROJECT',
+    type: 'DELETE_ROW',
     payload: axios.delete(`http://localhost:9001/projects/${id}/delete`)
   }
 }

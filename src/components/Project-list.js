@@ -1,70 +1,57 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 
 class Projectlist extends Component {
 
   render () {
+
+     const createListItems = () => {
+       return this.props.projects.map((project, i) => {
+         return (
+               <tr key={i}>
+                 <td>{project.id}</td>
+                 <td>{project.program_name}</td>
+                 <td>{project.number_of_projects}</td>
+                 <td>{project.program_manager}</td>
+                 <td>{project.priority}</td>
+                 <td>{project.status}</td>
+                 <td>{project.complete}</td>
+               </tr>
+         )
+       })
+     }
+
     return (
       <div className="project">
-        <row className="row left bold">
-          <h5 className="black-text text-lighten-4 bold">Program Details</h5>
-        </row>
-        <table className="highlight responsive-table centered">
-        <thead>
-          <tr>
-              <th className="black-text text-lighten-4">Program Name</th>
-              <th className="black-text text-lighten-4">Number of Projects</th>
-              <th className="black-text text-lighten-4">Program Manager</th>
-              <th className="black-text text-lighten-4">Priority</th>
-              <th className="black-text text-lighten-4">Status</th>
-              <th className="black-text text-lighten-4">Complete</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>AppExtender</td>
-            <td>10</td>
-            <td>Alvin</td>
-            <td>Medium</td>
-            <td>WIP</td>
-            <td>25%</td>
-          </tr>
-          <tr>
-            <td>Window 8.0 Upgrade</td>
-            <td>12</td>
-            <td>Alan</td>
-            <td>High</td>
-            <td>Not Started</td>
-            <td>0%</td>
-          </tr>
-          <tr>
-            <td>ICD-10</td>
-            <td>8</td>
-            <td>Jonathan</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-          </tr>
-          <tr>
-            <td>Cloud Uplift</td>
-            <td>10</td>
-            <td>Jose</td>
-            <td>High</td>
-            <td>WIP</td>
-            <td>50%</td>
-          </tr>
-          <tr>
-            <td>Help Desk Uplift</td>
-            <td>5</td>
-            <td>Michael</td>
-            <td>Low</td>
-            <td>WIP</td>
-            <td>75%</td>
-          </tr>
-        </tbody>
-      </table>
+          <div className="row left bold">
+            <h5 className="black-text text-lighten-4 bold">Program Details</h5>
+          </div>
+          <table className="highlight responsive-table centered">
+            <thead>
+              <tr>
+                  <th className="black-text text-lighten-4">id</th>
+                  <th className="black-text text-lighten-4">Program Name</th>
+                  <th className="black-text text-lighten-4">Number of Projects</th>
+                  <th className="black-text text-lighten-4">Program Manager</th>
+                  <th className="black-text text-lighten-4">Priority</th>
+                  <th className="black-text text-lighten-4">Status</th>
+                  <th className="black-text text-lighten-4">Complete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {createListItems()}
+            </tbody>
+          </table>
       </div>
     )
   }
 }
-export default Projectlist
+
+function mapStateToProps(state) {
+  return {
+    projects: state.projects
+  };
+}
+
+export default connect(mapStateToProps, null)(Projectlist);

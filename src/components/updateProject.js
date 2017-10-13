@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class UpdateProject extends Component {
+
   render () {
+
     return (
       <div className="project">
 
-          <row className="row left bold">
+          <div className="row left bold">
             <h5 className="black-text text-lighten-4">Update Program</h5>
-          </row>
+          </div>
           <table className="highlight">
           <thead>
             <tr>
@@ -29,6 +33,10 @@ class UpdateProject extends Component {
               <td className="black-text text-lighten-4">25%</td>
             </tr>
           </tbody>
+          <div className="container">
+            <br></br>
+            <Link to="/" className="waves-effect waves-light btn-large black">Delete</Link>
+          </div>
         </table>
 
       </div>
